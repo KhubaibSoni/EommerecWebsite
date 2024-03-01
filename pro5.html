@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Information</title>
+  <style>
+    /* Center content vertically and horizontally */
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f4f4;
+    }
+    
+    /* Product container */
+    .product-container {
+      display: flex;
+
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 700px;
+    }
+    /* Product image */
+    .product-image {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    /* Product description */
+    .product-description {
+      padding: 20px;
+    }
+
+    /* Responsive styling */
+    @media only screen and (max-width: 600px) {
+      .product-container {
+        flex-direction: column;
+      }
+      
+      .product-description {
+        padding: 20px 20px 0;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Product Container -->
+  <div class="product-container">
+    <!-- Product Image -->
+    <img src="bg2 (1).jpg" alt="Product Image" class="product-image" width="200px">
+    
+    <!-- Product Description -->
+    <div class="product-description">
+      <!-- Product Name -->
+      <h2>Casual Shirt Shirt</h2>
+      
+      <!-- Product Price -->
+      <p>Price: $60</p>
+      
+      <!-- Product Description -->
+      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id nulla vitae risus suscipit malesuada.</p>
+      
+      <!-- Add Product Quantity -->
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" value="1" min="1">
+      
+      <!-- Button to Add Product to Cart -->
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+  </div>
+
+  <div id="cart"></div>
+
+  <script>
+    // Function to add product to cart
+    function addToCart() {
+      const quantity = parseInt(document.getElementById('quantity').value);
+      const productName = "Product Name"; // Replace with actual product name
+      const productPrice = 10; // Replace with actual product price
+      const total = quantity * productPrice;
+      
+     
+    }
+  </script>
+</body>
+</html>
